@@ -57,7 +57,7 @@ export function Navigation() {
               <img 
                 src={irisLogo} 
                 alt="IRIS-AI Logo" 
-                className="h-12 w-auto object-contain"
+                className="h-14 sm:h-16 w-auto object-contain"
                 data-testid="img-logo"
               />
             </motion.a>
