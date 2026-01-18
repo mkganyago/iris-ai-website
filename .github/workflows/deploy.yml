@@ -32,8 +32,9 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          VITE_BASE_URL: /${{ github.event.repository.name }}/
+
+      - name: Fix paths for GitHub Pages
+        run: sed -i 's|href="/|href="./|g; s|src="/|src="./|g' dist/public/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
