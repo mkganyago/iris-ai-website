@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Droplets } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import irisLogo from "@assets/iris_ai_logo_1768743528157.png";
 
 const navItems = [
   { label: "Overview", href: "#overview" },
@@ -53,10 +54,12 @@ export function Navigation() {
               whileHover={{ scale: 1.02 }}
               data-testid="link-logo"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <Droplets className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <span className="font-bold text-xl hidden sm:block" data-testid="text-brand-name">IRIS-AI</span>
+              <img 
+                src={irisLogo} 
+                alt="IRIS-AI Logo" 
+                className="h-12 w-auto object-contain"
+                data-testid="img-logo"
+              />
             </motion.a>
 
             <div className="hidden lg:flex items-center gap-1 flex-wrap">

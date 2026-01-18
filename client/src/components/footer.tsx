@@ -1,4 +1,7 @@
-import { Droplets, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
+import irisLogo from "@assets/iris_ai_logo_1768743528157.png";
+import ujLogo from "@assets/uj_logo_1768743528157.png";
+import wrcLogo from "@assets/WRC-Logo_1768743528157.jpg";
 
 const footerLinks = [
   {
@@ -32,11 +35,13 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4 flex-wrap" data-testid="footer-brand">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <Droplets className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <span className="font-bold text-xl">IRIS-AI</span>
+            <div className="flex items-center gap-3 mb-4 flex-wrap" data-testid="footer-brand">
+              <img 
+                src={irisLogo} 
+                alt="IRIS-AI Logo" 
+                className="h-14 w-auto object-contain"
+                data-testid="img-footer-logo"
+              />
             </div>
             <p className="text-muted-foreground mb-4 max-w-md" data-testid="text-footer-description">
               Catchment-Scale Irrigation Intelligence System for Water-Use Efficiency and Compliance, 
@@ -67,14 +72,47 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4 flex-wrap">
-          <p className="text-sm text-muted-foreground text-center sm:text-left" data-testid="text-copyright">
-            © 2025 IRIS-AI Project. Portions of this work are licensed under{" "}
-            <span className="font-medium">Creative Commons Attribution Non-Commercial (CC BY-NC)</span>.
-          </p>
-          <p className="text-sm text-muted-foreground flex items-center gap-1" data-testid="text-made-with-love">
-            Made with <Heart className="w-4 h-4 text-red-500 dark:text-red-400" /> for sustainable water governance
-          </p>
+        <div className="pt-8 border-t border-border">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mb-6 flex-wrap">
+            <a 
+              href="https://www.uj.ac.za" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex-shrink-0"
+              data-testid="link-uj-logo"
+            >
+              <img 
+                src={ujLogo} 
+                alt="University of Johannesburg Logo" 
+                className="h-16 w-auto object-contain"
+                data-testid="img-uj-logo"
+              />
+            </a>
+            <a 
+              href="https://www.wrc.org.za" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex-shrink-0"
+              data-testid="link-wrc-logo"
+            >
+              <img 
+                src={wrcLogo} 
+                alt="Water Research Commission Logo" 
+                className="h-16 w-auto object-contain"
+                data-testid="img-wrc-logo"
+              />
+            </a>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 flex-wrap">
+            <p className="text-sm text-muted-foreground text-center sm:text-left" data-testid="text-copyright">
+              © 2025 IRIS-AI Project. Portions of this work are licensed under{" "}
+              <span className="font-medium">Creative Commons Attribution Non-Commercial (CC BY-NC)</span>.
+            </p>
+            <p className="text-sm text-muted-foreground flex items-center gap-1" data-testid="text-made-with-love">
+              Made with <Heart className="w-4 h-4 text-red-500 dark:text-red-400" /> for sustainable water governance
+            </p>
+          </div>
         </div>
       </div>
     </footer>
