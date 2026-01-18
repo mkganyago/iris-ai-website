@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
+// import { apiRequest } from "@/lib/queryClient";
 import { insertContactMessageSchema, type InsertContactMessage } from "@shared/schema";
 
 export function ContactForm() {
@@ -28,7 +28,25 @@ export function ContactForm() {
 
   const mutation = useMutation({
     mutationFn: async (data: InsertContactMessage) => {
-      const response = await apiRequest("POST", "/api/contact", data);
+      // Using FormSubmit.co for static site form handling
+      // The owner of 'mahlatsek@uj.ac.za' will need to confirm the first submission
+      const response = await fetch("https://formsubmit.co/ajax/mahlatsek@uj.ac.za", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          ...data,
+          _subject: `New Contact Form Submission: ${data.subject || "No Subject"}`,
+          _template: "table" // Optional: makes the email look nicer
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
       return response.json();
     },
     onSuccess: () => {
