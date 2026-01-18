@@ -1,0 +1,99 @@
+Instructions for Deployment
+1. Create a Repository: Go to GitHub and create a new public repository named iris-ai-project.
+2. Create the File: In the repository, create a new file named README.md.
+3. Paste Content: Copy the code block below into that file.
+4. Activate Pages: Go to Settings > Pages. Under "Build and deployment", select "Deploy from a branch" and choose main / root. GitHub will generate a URL (usually username.github.io/iris-ai-project).
+
+--------------------------------------------------------------------------------
+Website Content (Copy into README.md)
+
+# IRIS-AI: Catchment-Scale Irrigation Intelligence System
+### For Water-Use Efficiency and Compliance, Powered by Earth Observation and AI
+
+**Lead Organisation:** University of Johannesburg  
+**Project Status:** Active (2025–2027)  
+**Focus Area:** Water Utilisation in Agriculture & Digital Transformation
+
+---
+
+## 🌊 Project Overview
+
+**IRIS-AI** (Irrigation Resource Intelligence System - AI) is a pioneering initiative designed to address South Africa’s pressing water governance challenges [1]. By leveraging **Earth Observation (EO)** and **Artificial Intelligence (AI)**, the project aims to optimize irrigation efficiency, enforce compliance, and empower agricultural stakeholders [1].
+
+In semi-arid regions like South Africa, agriculture accounts for 60–70% of national water withdrawals [2]. IRIS-AI bridges the gap between technological innovation and water governance by providing scalable, real-time monitoring tools to bridge the digital divide and ensure sustainable resource management [3].
+
+---
+
+## 🚀 Key Innovation & Products
+
+The project delivers three core technological solutions:
+
+### 1. IRIS-AI Compliance Dashboard
+A tool for regulators (e.g., Department of Water and Sanitation) to monitor water use at a catchment scale.
+*   **Technology:** Combines multi-sensor EO data (**Sentinel-2** optical + **Sentinel-1** SAR) with hybrid AI models (**CNN-LSTM**) [4].
+*   **Function:** Enables all-weather, real-time irrigation monitoring at 10–30 m resolution [4].
+*   **Impact:** Classifies water use into tiers—Red (Unlicensed), Amber (Over-licensed), and Green (Compliant)—to prioritise audits [5]. It aims to reduce unlicensed water abstraction by **30%** in pilot regions [4].
+
+### 2. Farmer Advisory Service (FAS)
+A decision support system for commercial and smallholder farmers.
+*   **Technology:** Uses fine-tuned **Large Language Models (LLMs)**, such as GPT-4, trained on regional agricultural guidelines [5].
+*   **Function:** Delivers hyper-localised irrigation advisories via **SMS, Voice, or Push Notifications** [6].
+*   **Accessibility:** Includes a **Mobile-Optimised Dashboard** designed for low-bandwidth (≤2G) rural networks [7].
+*   **Impact:** Expected to improve water-use efficiency by **20%** [8].
+
+### 3. Open-Source Code Repository
+*   **Goal:** To enable global replication of the ML workflows [4].
+*   **Licensing:** Codebases for irrigation mapping and anomaly detection will be released under **MIT** or **CC BY-NC** licenses [5, 9].
+
+---
+
+## 🛰️ Methodology & Technology
+
+IRIS-AI employs a sophisticated technical framework:
+
+*   **Data Sources:** Sentinel-2 (optical), Sentinel-1 (SAR), Landsat-8/9, and FAO WaPOR data [10].
+*   **AI Architecture:** A hybrid **CNN-LSTM** model processes spatial features (CNN) and temporal dynamics (LSTM) to map irrigated areas and detect anomalies [10].
+*   **Advisory System:** Retrieval-Augmented Generation (RAG) chatbots synthesise sensor data and weather forecasts into simple, actionable language for farmers (e.g., "Delay irrigation: soil moisture exceeds optimal levels") [5, 11].
+*   **Validation:** Models are validated against field campaigns using GPS and soil moisture sensors [5].
+
+---
+
+## 🎯 Impact Goals
+
+*   **Governance:** Scale inspections to cover **100% of high-risk licenses annually** through remote auditing [12].
+*   **Economy:** Reduce the cost of manual field audits, which currently range between ZAR 5,000–10,000 per farm [2].
+*   **Capacity Building:** Train DWS officials and support MSc students through an EO/AI Training Toolkit [6, 12].
+
+---
+
+## 👥 The Team
+
+**Lead Organisation:** University of Johannesburg (Dept of Geography, Environmental Management and Energy Studies) [13].
+
+*   **Project Leader:** **Dr. Mahlatse Kganyago** (Expertise: Earth Observation, Precision Agriculture) [14].
+*   **AI & Development Lead:** **Mr. Karabo Mithi** (Expertise: AI, Applications Development) [15, 16].
+*   **Community Engagement:** **Ms. Tiisetso Kekana** (Geomatics by MT) [15, 16].
+
+**Collaborating Organisations:**
+*   **Geomatics by MT:** Capacity building and community development [17].
+
+---
+
+## 📄 Publications & Resources
+
+*   **Water-Use Compliance Framework:** A policy tool embedding EO/AI into South Africa’s legal compliance mechanisms [18].
+*   **Training Toolkit:** A modular curriculum blending FAO WaPOR frameworks with local case studies [6].
+
+*Links to code and datasets will appear here as the project progresses.*
+
+---
+
+## 📞 Contact
+
+**Department of Geography, Environmental Management and Energy Studies**  
+University of Johannesburg, Kingsway Campus, Auckland Park, 2092 [13].
+
+*   **Email:** [mahlatsek@uj.ac.za](mailto:mahlatsek@uj.ac.za) [1]
+
+---
+*© 2025 IRIS-AI Project. Portions of this work are licensed under Creative Commons Attribution Non-Commercial (CC BY-NC) [9].*
