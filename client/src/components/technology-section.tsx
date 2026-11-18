@@ -15,9 +15,9 @@ import { Badge } from "@/components/ui/badge";
 
 const dataSources = [
   { name: "Sentinel-2", type: "Optical", description: "Multi-spectral imagery for vegetation analysis" },
-  { name: "Sentinel-1", type: "SAR", description: "All-weather radar for moisture detection" },
+  { name: "Sentinel-1", type: "SAR", description: "Radar observations for crop-condition context" },
   { name: "Landsat-8/9", type: "Optical", description: "Long-term historical imagery" },
-  { name: "FAO WaPOR", type: "Database", description: "Water productivity data" },
+  { name: "VIIRS / MODIS", type: "Database", description: "Evapotranspiration products" },
 ];
 
 const techStack = [
@@ -25,25 +25,25 @@ const techStack = [
     icon: Layers,
     title: "Data Sources",
     description: "Multi-sensor Earth Observation data fusion",
-    items: ["Sentinel-2 optical imagery", "Sentinel-1 SAR data", "Landsat-8/9 archive", "FAO WaPOR database"],
+    items: ["Sentinel-2 optical imagery", "Sentinel-1 SAR data", "Landsat-8/9 archive", "VIIRS and MODIS evapotranspiration"],
   },
   {
     icon: Cpu,
     title: "AI Architecture",
-    description: "Hybrid deep learning models",
-    items: ["CNN for spatial feature extraction", "LSTM for temporal dynamics", "Irrigation area mapping", "Anomaly detection"],
+    description: "Indicators, decision rules and AI explanations",
+    items: ["Crop-condition indicators", "Weather and moisture context", "Field and catchment aggregation", "Irrigation-priority assessment"],
   },
   {
     icon: MessageCircle,
     title: "Advisory System",
     description: "Natural language generation",
-    items: ["RAG-based chatbots", "Weather forecast synthesis", "Actionable recommendations", "Multi-language support"],
+    items: ["Context-grounded advisory text", "Weather forecast synthesis", "Actionable recommendations", "Field-specific explanations"],
   },
   {
     icon: CheckSquare,
-    title: "Validation",
-    description: "Ground-truth verification",
-    items: ["GPS field campaigns", "Soil moisture sensors", "Expert verification", "Continuous calibration"],
+    title: "Validation Approach",
+    description: "Planned evaluation against reference observations",
+    items: ["Reference observations", "Field-based comparisons", "Expert verification", "Data-quality assessment"],
   },
 ];
 
@@ -64,8 +64,7 @@ export function TechnologySection() {
             Methodology & Technology
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="text-technology-description">
-            IRIS-AI employs a sophisticated technical framework combining cutting-edge 
-            satellite data with advanced machine learning.
+            IRIS-AI combines optical and radar imagery, evapotranspiration products and weather data. Quality checks and spatial aggregation connect these observations to agricultural fields and catchments.
           </p>
         </motion.div>
 
@@ -156,10 +155,9 @@ export function TechnologySection() {
                   <Brain className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2" data-testid="text-advisory-title">Example Advisory Output</h3>
+                  <h3 className="text-lg font-semibold mb-2" data-testid="text-advisory-title">From Observation to Advice</h3>
                   <p className="text-muted-foreground italic bg-background/50 rounded-lg p-4 font-mono text-sm" data-testid="text-advisory-example">
-                    "Delay irrigation: soil moisture exceeds optimal levels. Current reading: 42%. 
-                    Recommended action: Resume irrigation in 2-3 days when moisture drops below 35%."
+                    The advisory workflow combines crop-condition and moisture indicators with weather context to explain irrigation priorities and support scheduling.
                   </p>
                 </div>
               </div>

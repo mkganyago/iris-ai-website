@@ -17,49 +17,31 @@ const products = [
   {
     icon: Shield,
     title: "IRIS-AI Compliance Dashboard",
-    description: "A tool for regulators (e.g., Department of Water and Sanitation) to monitor water use at a catchment scale.",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
-    borderColor: "border-primary/20",
-    technology: "Sentinel-2 + Sentinel-1 SAR with CNN-LSTM models",
-    features: [
-      "All-weather, real-time irrigation monitoring at 10–30m resolution",
-      "Water use classification: Red (Unlicensed), Amber (Over-licensed), Green (Compliant)",
-      "Prioritised audit recommendations",
-    ],
-    impact: "30% reduction in unlicensed water abstraction",
-    impactColor: "bg-red-500/10 text-red-600 dark:text-red-400",
+    description: "A Web-based prototype that organises field and catchment information for regulatory review.",
+    color: "text-primary", bgColor: "bg-primary/10", borderColor: "border-primary/20",
+    technology: "Earth observation, weather and water-authorisation context",
+    features: ["Map-based field inspection and catchment summaries", "Water-use estimates, allocation comparisons and temporal trends", "Alerts to help prioritise further investigation"],
+    impact: "Supporting evidence-informed oversight",
+    impactColor: "bg-blue-500/10 text-blue-600 dark:text-blue-400",
   },
   {
     icon: Smartphone,
     title: "Farmer Advisory Service (FAS)",
-    description: "A decision support system for commercial and smallholder farmers.",
-    color: "text-chart-2",
-    bgColor: "bg-chart-2/10",
-    borderColor: "border-chart-2/20",
-    technology: "Fine-tuned LLMs (GPT-4) trained on regional guidelines",
-    features: [
-      "Hyper-localised irrigation advisories",
-      "SMS, Voice, or Push Notification delivery",
-      "Mobile-optimised dashboard for low-bandwidth (≤2G) rural networks",
-    ],
-    impact: "20% improvement in water-use efficiency",
+    description: "A mobile-oriented prototype bringing field monitoring and irrigation planning into one workflow.",
+    color: "text-chart-2", bgColor: "bg-chart-2/10", borderColor: "border-chart-2/20",
+    technology: "Satellite indicators, weather context and grounded advisory messages",
+    features: ["Field registration and crop-condition monitoring", "Canopy-moisture indicators and water-use context", "Irrigation priorities, alerts and scheduling support"],
+    impact: "Supporting practical farm decisions",
     impactColor: "bg-green-500/10 text-green-600 dark:text-green-400",
   },
   {
     icon: Code,
-    title: "Open-Source Code Repository",
-    description: "Enabling global replication of the ML workflows for irrigation mapping and anomaly detection.",
-    color: "text-chart-3",
-    bgColor: "bg-chart-3/10",
-    borderColor: "border-chart-3/20",
-    technology: "MIT / CC BY-NC licensed codebases",
-    features: [
-      "Complete ML workflows for irrigation mapping",
-      "Anomaly detection algorithms",
-      "Documentation and training materials",
-    ],
-    impact: "Global accessibility & replicability",
+    title: "Project Development and Capacity Building",
+    description: "Project methods, postgraduate training and stakeholder engagement support the development of IRIS-AI.",
+    color: "text-chart-3", bgColor: "bg-chart-3/10", borderColor: "border-chart-3/20",
+    technology: "Literature synthesis, documented methods and technical evaluation",
+    features: ["Satellite-based irrigation monitoring", "Documented analytical methods and in-situ validation", "Skills development in Earth observation and AI"],
+    impact: "Building local capacity",
     impactColor: "bg-blue-500/10 text-blue-600 dark:text-blue-400",
   },
 ];
@@ -78,11 +60,10 @@ export function ProductsSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" data-testid="text-products-title">
-            Key Innovation & Products
+            Project Tools
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="text-products-description">
-            The project delivers three core technological solutions designed to transform 
-            water governance in South Africa.
+            The integrated prototype connects farmer advisory and regulatory workflows, supported by project activities and skills development.
           </p>
         </motion.div>
 

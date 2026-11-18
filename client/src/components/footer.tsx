@@ -1,6 +1,7 @@
 import { Heart } from "lucide-react";
 import irisLogo from "@assets/iris_ai_logo_1768743528157.png";
-import ujLogo from "@assets/uj_logo_1768743528157.png";
+import ujLogo from "@assets/uj-logo.jpg";
+import geomaticsLogo from "@assets/geomatics-by-mt.jpg";
 import wrcLogo from "@assets/WRC-Logo_1768743528157.jpg";
 
 const footerLinks = [
@@ -9,7 +10,6 @@ const footerLinks = [
     links: [
       { label: "Overview", href: "#overview" },
       { label: "Products", href: "#products" },
-      { label: "Technology", href: "#technology" },
       { label: "Impact", href: "#impact" },
     ],
   },
@@ -73,7 +73,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mb-6 flex-wrap">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-8 mb-6">
             <a 
               href="https://www.uj.ac.za" 
               target="_blank" 
@@ -84,10 +84,16 @@ export function Footer() {
               <img 
                 src={ujLogo} 
                 alt="University of Johannesburg Logo" 
-                className="h-16 w-auto object-contain"
+                className="h-24 w-24 object-contain"
                 data-testid="img-uj-logo"
               />
             </a>
+            <img
+              src={geomaticsLogo}
+              alt="Geomatics by MT Logo"
+              className="h-24 w-56 object-contain"
+              data-testid="img-geomatics-logo"
+            />
             <a 
               href="https://www.wrc.org.za" 
               target="_blank" 
@@ -106,7 +112,7 @@ export function Footer() {
           
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 flex-wrap">
             <p className="text-sm text-muted-foreground text-center sm:text-left" data-testid="text-copyright">
-              © 2025 IRIS-AI Project. Portions of this work are licensed under{" "}
+              © {new Date().getFullYear()} IRIS-AI Project. Portions of this work are licensed under{" "}
               <span className="font-medium">Creative Commons Attribution Non-Commercial (CC BY-NC)</span>.
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-1" data-testid="text-made-with-love">

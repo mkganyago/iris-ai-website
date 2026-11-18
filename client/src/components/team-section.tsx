@@ -32,6 +32,24 @@ const teamMembers = [
     initials: "TK",
     color: "bg-chart-3",
   },
+  {
+    name: "Ms Paballo Mhlabai",
+    researchTopic: "Remote Sensing of Agricultural Water Use Using Deep Learning and LLMs: A Case of Algoa West Catchment, South Africa.",
+    role: "MSc Candidate",
+    expertise: [],
+    organization: "University of Johannesburg",
+    initials: "PM",
+    color: "bg-primary",
+  },
+  {
+    name: "Ms Sinelise Gcelu",
+    researchTopic: "Earth Observation and Deep Learning Techniques for Quantifying Irrigation Practices and Agricultural Water Use Compliance at the Catchment-Scale",
+    role: "MSc Candidate",
+    expertise: [],
+    organization: "University of Johannesburg",
+    initials: "SG",
+    color: "bg-chart-2",
+  },
 ];
 
 const organizations = [
@@ -61,7 +79,7 @@ export function TeamSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" data-testid="text-team-title">
-            The Team
+            Project Team
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="text-team-description">
             A multidisciplinary team of experts in Earth Observation, AI, and community engagement.
@@ -85,6 +103,14 @@ export function TeamSection() {
                   </Avatar>
                   <h3 className="text-lg font-bold mb-1" data-testid={`text-team-name-${index}`}>{member.name}</h3>
                   <p className="text-primary font-medium mb-3" data-testid={`text-team-role-${index}`}>{member.role}</p>
+                  {member.researchTopic && (
+                    <div className="mb-4 text-sm leading-relaxed">
+                      <p className="font-semibold mb-1">Research topic</p>
+                      <p className="text-muted-foreground" data-testid={`text-team-research-topic-${index}`}>
+                        {member.researchTopic}
+                      </p>
+                    </div>
+                  )}
                   <div className="flex flex-wrap justify-center gap-2 mb-4">
                     {member.expertise.map((skill, skillIndex) => (
                       <Badge key={skill} variant="secondary" className="text-xs" data-testid={`badge-team-skill-${index}-${skillIndex}`}>

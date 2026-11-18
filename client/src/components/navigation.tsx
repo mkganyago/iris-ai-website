@@ -8,7 +8,6 @@ import irisLogo from "@assets/iris_ai_logo_1768743528157.png";
 const navItems = [
   { label: "Overview", href: "#overview" },
   { label: "Products", href: "#products" },
-  { label: "Technology", href: "#technology" },
   { label: "Impact", href: "#impact" },
   { label: "Team", href: "#team" },
   { label: "Contact", href: "#contact" },

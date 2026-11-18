@@ -1,157 +1,83 @@
-import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import { TrendingDown, Droplets, Search, Wallet } from "lucide-react";
+import { Monitor, ShieldCheck, MessageCircle, GraduationCap, Code, BookOpen, FileText, Network } from "lucide-react";
 
-const metrics = [
+const impacts = [
   {
-    icon: TrendingDown,
-    value: 30,
-    suffix: "%",
-    label: "Reduction in Unlicensed Water Abstraction",
-    description: "In pilot regions through compliance monitoring",
-    color: "text-red-500 dark:text-red-400",
-    bgColor: "bg-red-500/10",
+    title: "Operational IRIS-AI Platform",
+    icon: Monitor,
+    description: "Providing real-time irrigation maps and compliance reports.",
   },
   {
-    icon: Droplets,
-    value: 20,
-    suffix: "%",
-    label: "Improvement in Water-Use Efficiency",
-    description: "Through AI-powered farmer advisories",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
+    title: "Enhanced Regulatory Tools",
+    icon: ShieldCheck,
+    description:
+      "Supporting regulators, including the Department of Water and Sanitation (DWS), to reduce unlicensed water use in pilot catchments through advanced anomaly detection and remote audits.",
   },
   {
-    icon: Search,
-    value: 100,
-    suffix: "%",
-    label: "High-Risk License Coverage",
-    description: "Annual remote auditing through EO technology",
-    color: "text-chart-2",
-    bgColor: "bg-chart-2/10",
+    title: "Farmer Empowerment",
+    icon: MessageCircle,
+    description:
+      "Providing push notifications, SMS and voice advisories through large language models to help farmers optimise irrigation and improve water-use efficiency.",
   },
   {
-    icon: Wallet,
-    value: 10000,
-    prefix: "ZAR ",
-    label: "Cost per Manual Audit",
-    description: "Reduced through automated remote sensing",
-    color: "text-chart-3",
-    bgColor: "bg-chart-3/10",
+    title: "Trained Personnel and Resources",
+    icon: GraduationCap,
+    description:
+      "Building skills among DWS officials and farmers through workshops, and supporting MSc students in Earth observation and AI applications.",
+  },
+  {
+    title: "Open-Access Tools",
+    icon: Code,
+    description: "Making tools available to support replication.",
+  },
+  {
+    title: "Journal Publications",
+    icon: BookOpen,
+    description: "Sharing project methods and findings through journal publications.",
+  },
+  {
+    title: "Policy Briefs",
+    icon: FileText,
+    description:
+      "Providing evidence-based recommendations to inform updates to existing strategies and frameworks.",
+  },
+  {
+    title: "Scalable Framework",
+    icon: Network,
+    description: "Developing a framework adaptable to other water-stressed catchments.",
   },
 ];
 
-function AnimatedCounter({ 
-  value, 
-  prefix = "", 
-  suffix = "",
-  duration = 2000,
-  isInView 
-}: { 
-  value: number; 
-  prefix?: string;
-  suffix?: string;
-  duration?: number;
-  isInView: boolean;
-}) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    let startTime: number | null = null;
-    const startValue = 0;
-
-    const animate = (currentTime: number) => {
-      if (startTime === null) startTime = currentTime;
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentValue = Math.floor(startValue + (value - startValue) * easeOutQuart);
-      
-      setCount(currentValue);
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  }, [isInView, value, duration]);
-
-  return (
-    <span>
-      {prefix}{count.toLocaleString()}{suffix}
-    </span>
-  );
-}
-
 export function ImpactSection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="impact" className="py-20 lg:py-32 bg-muted/30" ref={ref}>
+    <section id="impact" className="py-20 lg:py-32 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" data-testid="text-impact-title">
-            Impact Goals
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            Impact
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="text-impact-description">
-            Measurable outcomes driving sustainable water governance across South Africa.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Intended project outcomes for irrigation management, water governance
+            and local capacity.
           </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {metrics.map((metric, index) => (
-            <motion.div
-              key={metric.label}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative overflow-visible"
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {impacts.map((impact) => (
+            <article
+              key={impact.title}
+              className="bg-card rounded-xl p-8 border border-card-border"
             >
-              <div className="bg-card rounded-xl p-6 border border-card-border h-full hover-elevate" data-testid={`card-metric-${index}`}>
-                <div className={`w-12 h-12 rounded-xl ${metric.bgColor} flex items-center justify-center mb-4`}>
-                  <metric.icon className={`w-6 h-6 ${metric.color}`} />
-                </div>
-                <div className={`text-4xl lg:text-5xl font-bold mb-2 ${metric.color}`} data-testid={`text-metric-value-${index}`}>
-                  <AnimatedCounter
-                    value={metric.value}
-                    prefix={metric.prefix}
-                    suffix={metric.suffix}
-                    isInView={isInView}
-                    duration={2000 + index * 200}
-                  />
-                </div>
-                <h3 className="font-semibold mb-1" data-testid={`text-metric-label-${index}`}>{metric.label}</h3>
-                <p className="text-sm text-muted-foreground" data-testid={`text-metric-desc-${index}`}>{metric.description}</p>
+              <div className="flex items-start gap-3 mb-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <impact.icon className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <h3 className="text-xl font-semibold pt-1">{impact.title}</h3>
               </div>
-            </motion.div>
+              <p className="text-muted-foreground leading-relaxed">
+                {impact.description}
+              </p>
+            </article>
           ))}
         </div>
-
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="inline-flex items-center gap-4 bg-card rounded-xl p-6 border border-card-border flex-wrap justify-center" data-testid="card-capacity-building">
-            <div className="text-left">
-              <h3 className="font-semibold text-lg mb-1" data-testid="text-capacity-title">Capacity Building</h3>
-              <p className="text-muted-foreground" data-testid="text-capacity-desc">
-                Training DWS officials and supporting MSc students through an EO/AI Training Toolkit
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

@@ -81,7 +81,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.8 }}
           data-testid="text-hero-description"
         >
-          For Water-Use Efficiency and Compliance, Powered by Earth Observation and AI
+          Earth observation and AI supporting irrigation decisions and water-use oversight in South Africa.
         </motion.p>
 
         <motion.div
@@ -117,11 +117,11 @@ export function HeroSection() {
         >
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-lg px-4 py-2 border border-white/20" data-testid="badge-timeline">
             <Calendar className="w-5 h-5 text-cyan-300" />
-            <span className="text-white font-medium">2025–2027</span>
+            <span className="text-white font-medium">Project prototype</span>
           </div>
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-lg px-4 py-2 border border-white/20" data-testid="badge-products">
             <Layers className="w-5 h-5 text-green-300" />
-            <span className="text-white font-medium">3 Core Products</span>
+            <span className="text-white font-medium">Farmer and regulator tools</span>
           </div>
         </motion.div>
       </motion.div>

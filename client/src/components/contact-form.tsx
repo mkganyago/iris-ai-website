@@ -94,7 +94,7 @@ export function ContactForm() {
       <CardHeader>
         <CardTitle data-testid="text-form-title">Send us a Message</CardTitle>
         <CardDescription data-testid="text-form-description">
-          Fill out the form below and we'll respond within 2-3 business days.
+          Get in touch about the project, collaboration or stakeholder engagement.
         </CardDescription>
       </CardHeader>
       <CardContent>

@@ -7,22 +7,22 @@ import { Card, CardContent } from "@/components/ui/card";
 const features = [
   {
     icon: Droplets,
-    title: "60-70%",
-    description: "Of national water withdrawals in South Africa are used for agriculture",
+    title: "Water Stewardship",
+    description: "Supporting informed decisions about agricultural water use",
     color: "text-primary",
     bgColor: "bg-primary/10",
   },
   {
     icon: Satellite,
     title: "Earth Observation",
-    description: "Leveraging Sentinel-2 and Sentinel-1 satellite data for real-time monitoring",
+    description: "Combining satellite observations with weather and field information",
     color: "text-chart-2",
     bgColor: "bg-chart-2/10",
   },
   {
     icon: Brain,
     title: "AI-Powered",
-    description: "Hybrid CNN-LSTM models for intelligent irrigation mapping and anomaly detection",
+    description: "Analytical indicators and context-grounded AI explanations for irrigation decisions",
     color: "text-chart-3",
     bgColor: "bg-chart-3/10",
   },
@@ -53,7 +53,7 @@ export function OverviewSection() {
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="text-overview-description">
             <span className="font-semibold text-foreground">IRIS-AI</span> (Irrigation Resource Intelligence System - AI) 
-            is a pioneering initiative designed to address South Africa's pressing water governance challenges.
+            is a University of Johannesburg project supported by the Water Research Commission. It connects field-level irrigation information with catchment-scale water-use oversight.
           </p>
         </motion.div>
 
@@ -66,9 +66,7 @@ export function OverviewSection() {
             <Card className="h-full">
               <CardContent className="p-8">
                 <blockquote className="text-xl lg:text-2xl font-medium leading-relaxed text-foreground/90 border-l-4 border-primary pl-6" data-testid="text-mission-quote">
-                  "IRIS-AI bridges the gap between technological innovation and water governance 
-                  by providing scalable, real-time monitoring tools to bridge the digital divide 
-                  and ensure sustainable resource management."
+                  IRIS-AI brings satellite observations, weather information and agricultural field records together to help farmers plan irrigation and regulators review water-use patterns.
                 </blockquote>
               </CardContent>
             </Card>
@@ -91,14 +89,14 @@ export function OverviewSection() {
                 <h3 className="text-lg font-semibold mb-2">Project Status</h3>
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                  <span className="text-muted-foreground" data-testid="text-project-status">Active (2025–2027)</span>
+                  <span className="text-muted-foreground" data-testid="text-project-status">Integrated prototype under evaluation</span>
                 </div>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold mb-2">Project Number</h3>
-                <p className="font-mono text-muted-foreground" data-testid="text-project-number">2025/2026-01945</p>
+                <h3 className="text-lg font-semibold mb-2">Project Approach</h3>
+                <p className="font-mono text-muted-foreground" data-testid="text-project-number">Field-to-catchment decision support</p>
               </CardContent>
             </Card>
           </motion.div>
