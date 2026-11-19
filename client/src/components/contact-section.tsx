@@ -76,7 +76,7 @@ export function ContactSection() {
                         className="text-primary hover:underline"
                         data-testid="link-email-contact"
                       >
-                        mahlatsek@uj.ac.za
+                        Contact by email
                       </a>
                     </div>
                   </div>
