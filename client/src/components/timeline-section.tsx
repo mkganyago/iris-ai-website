@@ -25,9 +25,9 @@ const milestones = [
 
 export function TimelineSection() {
   return (
-    <section id="progress" className="py-20 lg:py-32 bg-muted/30">
+    <section id="progress" className="py-10 lg:py-14 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Project Progress</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">The project has progressed from requirements and evidence synthesis to an integrated prototype for technical evaluation.</p>
         </div>

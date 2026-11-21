@@ -49,9 +49,9 @@ const impacts = [
 
 export function ImpactSection() {
   return (
-    <section id="impact" className="py-20 lg:py-32 bg-muted/30">
+    <section id="impact" className="py-10 lg:py-14 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             Impact
           </h2>

@@ -36,10 +36,10 @@ export function ShowcaseSection() {
   }, []);
 
   return (
-    <section id="showcase" className="py-16 lg:py-24 bg-muted/30">
+    <section id="showcase" className="py-10 lg:py-14 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-10">
-          IRIS-AI in Action
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8">
+          IRIS-AI Farmer Advisor in Action
         </h2>
         <video
           ref={videoRef}
