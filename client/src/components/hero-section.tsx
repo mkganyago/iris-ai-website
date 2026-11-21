@@ -2,7 +2,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ChevronDown, Calendar, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import heroImage from "@assets/generated_images/south_african_irrigation_aerial_view.png";
 
 export function HeroSection() {
@@ -42,16 +41,6 @@ export function HeroSection() {
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         style={{ opacity }}
       >
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <Badge variant="secondary" className="mb-6 bg-white/10 backdrop-blur-md text-white border-white/20" data-testid="badge-organization">
-            University of Johannesburg
-          </Badge>
-        </motion.div>
-
         <motion.h1
           className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           initial={{ opacity: 0, y: 30 }}
